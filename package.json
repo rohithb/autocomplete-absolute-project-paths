@@ -1,9 +1,9 @@
 {
-  "name": "autocomplete-paths",
+  "name": "autocomplete-absolute-project-paths",
   "main": "./lib/autocomplete-paths",
-  "version": "1.0.5",
-  "description": "Adds path autocompletion to autocomplete+",
-  "repository": "https://github.com/atom-community/autocomplete-paths",
+  "version": "1.0.6",
+  "description": "Adds path autocompletion to autocomplete+ with project root relative path support",
+  "repository": "https://github.com/rohithb/autocomplete-absolute-project-paths",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
