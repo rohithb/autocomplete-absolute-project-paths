@@ -54,11 +54,11 @@ class PathsProvider
   findSuggestionsForPrefix: (editor, basePath, prefix) ->
     return [] unless basePath?
 
-    if atom.config.get('autocomplete-paths.relativeRoot')
-      if prefix.match(/^[/\\]/) and root = atom.project.getPaths()[0]
-        prefix = '.' + prefix
-        
     prefixPath = path.resolve(basePath, prefix)
+
+    if atom.config.get('autocomplete-absolute-project-paths.relativeRoot')
+      if prefix.match(/^[/\\]/) and root = atom.project.getPaths()[0]
+        prefixPath = root + prefix
 
     if prefix.match(/[/\\]$/)
       directory = prefixPath
